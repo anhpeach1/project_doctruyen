@@ -13,7 +13,7 @@
 
 ```bash
 # Sao chép kho lưu trữ
-git clone https://github.com/yourusername/doctruyen.git
+git clone https://github.com/anhpeach1/project_doctruyen
 
 # Di chuyển đến thư mục dự án
 cd doctruyen
@@ -43,7 +43,7 @@ npm run dev
 php artisan serve
 ```
 
-Truy cập `http://localhost:8000` trong trình duyệt của bạn để sử dụng ứng dụng.
+Truy cập `anhpeach.studio` trong trình duyệt của bạn để sử dụng ứng dụng.
 
 ## Công nghệ
 
@@ -54,16 +54,30 @@ Truy cập `http://localhost:8000` trong trình duyệt của bạn để sử d
 
 ## Hình ảnh trang web
 ### Đăng nhập 
-![Screenshot 2025-02-27 172814](https://github.com/user-attachments/assets/311018d5-3c3a-4399-b5cd-30d4d624cf18)
-### Giao diện người dùng
-![Screenshot_27-2-2025_17470_127 0 0 1](https://github.com/user-attachments/assets/33ff31a5-425c-420c-9f63-617b9f329f09)
-![Screenshot_27-2-2025_173618_127 0 0 1](https://github.com/user-attachments/assets/68dd0407-037d-4887-94c8-cceb3ad7fe11)
-![Screenshot_27-2-2025_173143_127 0 0 1](https://github.com/user-attachments/assets/1f585665-6272-4bf5-ae6f-aa5d259536ed)
-![Screenshot_27-2-2025_17508_127 0 0 1](https://github.com/user-attachments/assets/919070a1-eee8-4365-980b-da608698a7f9)
-### Giao diện admin
-![Screenshot 2025-02-27 174040](https://github.com/user-attachments/assets/2948ba40-4249-47ca-b2f4-d6c945ac1b1f)
-![Screenshot_27-2-2025_175258_127 0 0 1](https://github.com/user-attachments/assets/9c007704-fd32-4422-b17a-37c170fdd5d9)
+![image](https://github.com/user-attachments/assets/f1b33a11-b048-4f9d-984a-9be36af1fa28)
 
+### Giao diện người dùng
+![image](https://github.com/user-attachments/assets/2ec47c7d-9fe6-4358-8bd8-f6303b9ea33b)
+
+![image](https://github.com/user-attachments/assets/8f989600-10f4-4817-91ca-f2aa15c355b5)
+
+![image](https://github.com/user-attachments/assets/4f03c838-1b39-48d5-bb58-eac6cb07eef8)
+
+![image](https://github.com/user-attachments/assets/6ac12192-9242-4ce3-ac92-6a3b5e491498)
+
+![image](https://github.com/user-attachments/assets/5aa52189-f126-4708-b1eb-5732d0d4636a)
+
+![image](https://github.com/user-attachments/assets/d087ed14-f56c-40be-8720-6ad4fa2264ea)
+
+
+### Giao diện admin
+![image](https://github.com/user-attachments/assets/7d2f5a9a-37ac-4b7f-8b38-5ceb161e0ec5)
+
+![image](https://github.com/user-attachments/assets/53aacb07-dfde-45f7-ad0c-3da54b85d867)
+
+![image](https://github.com/user-attachments/assets/39a54ae9-9ea9-45e5-8980-7a4ff31f235e)
+
+![image](https://github.com/user-attachments/assets/606a00fe-9f8e-446c-967b-602d242307f3)
 
 
 ### 
