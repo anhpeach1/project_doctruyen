@@ -1,0 +1,79 @@
+/* story_style.css */
+
+body {
+    font-family: Arial, sans-serif; /* Chọn font chữ tương tự */
+    background-color: #f4f4f4; /* Màu nền trang */
+    color: #333; /* Màu chữ chính */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6; /* Khoảng cách dòng cho dễ đọc */
+}
+
+.story-container {
+    max-width: 800px; /* Độ rộng tối đa của nội dung */
+    margin: 20px auto; /* Căn giữa trang, có margin trên dưới */
+    background-color: #fff; /* Màu nền cho container nội dung */
+    padding: 30px; /* Padding xung quanh nội dung */
+    border-radius: 5px; /* Bo góc container */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Tạo bóng đổ nhẹ */
+}
+
+.story-header {
+    text-align: left; /* Căn tiêu đề sang trái */
+    margin-bottom: 20px; /* Margin dưới tiêu đề */
+}
+
+.story-title {
+    font-size: 2.5em; /* Kích thước tiêu đề lớn */
+    font-weight: bold; /* In đậm tiêu đề */
+    margin-bottom: 10px; /* Margin dưới tiêu đề chính */
+    color: #222; /* Màu tiêu đề đậm hơn */
+    line-height: 1.2; /* Giảm khoảng cách dòng trong tiêu đề */
+}
+
+.story-meta {
+    display: flex; /* Sử dụng flexbox để căn hàng các meta item */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    font-size: 0.9em; /* Kích thước chữ nhỏ hơn cho meta */
+    color: #777; /* Màu chữ nhạt hơn cho meta */
+}
+
+.meta-item {
+    margin-right: 20px; /* Khoảng cách giữa các meta item */
+    display: flex; /* Để căn giữa icon và số */
+    align-items: center;
+}
+
+.meta-icon {
+    margin-right: 5px; /* Khoảng cách giữa icon và số */
+}
+
+.meta-count {
+    /* Không cần style đặc biệt lúc này */
+}
+
+.story-content {
+    margin-bottom: 30px; /* Margin dưới phần nội dung chính */
+}
+
+.story-content p {
+    margin-bottom: 15px; /* Margin dưới mỗi đoạn văn */
+    font-size: 1.1em; /* Kích thước chữ cho nội dung */
+    color: #444; /* Màu chữ nội dung */
+}
+
+.story-separator {
+    border: 0; /* Loại bỏ border mặc định */
+    border-top: 1px solid #ddd; /* Tạo đường kẻ ngang nhẹ */
+    margin: 20px 0; /* Margin trên dưới cho đường kẻ */
+}
+
+.story-footer {
+    text-align: left; /* Căn footer sang trái */
+    font-size: 0.9em; /* Kích thước chữ nhỏ hơn cho footer */
+    color: #888; /* Màu chữ nhạt hơn cho footer */
+}
+
+.footer-text {
+    /* Không cần style đặc biệt lúc này, có thể thêm nếu muốn */
+}

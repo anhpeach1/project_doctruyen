@@ -1,0 +1,525 @@
+/* Base responsive setup */
+html {
+    font-size: 16px; /* Base font size for rem units */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    /* background-color: #fff; */
+    display: flex;
+    overflow: hidden;
+    margin: 0;
+}
+
+/* Make sides responsive with percentage */
+.left-side, .right-side {
+    width: 50%;
+    height: 100%;
+    position: relative;
+    
+}
+
+/* Update the left side background */
+.left-side {
+    width: 50%;
+    height: 100%;
+    position: relative;
+    background-color: #efe3fe; 
+}
+
+/* Modify the background image styling for better fit */
+.left-side::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/anh_trai.png');
+    background-size: 100% 100%; /* Forces the image to stretch to fill the container */
+    background-position: center;
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    opacity: 1; /* Reduce opacity further for better text visibility */
+    z-index: 1;
+}
+
+.left-content {
+    text-align: center;
+    position: absolute;
+    z-index: 2;
+    top: 50px; /* Adjust this value to move content up or down */
+    left: 0;
+    width: 100%;
+}
+
+.left-content h2 {
+    font-size: 2rem;
+}
+
+.left-content p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    padding: 0 10%;
+}
+
+.register-btn {
+    background-color: white;
+    color: #e066ff;
+    border: none;
+    padding: 0.75rem 1.875rem;
+    font-size: 1.1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.register-btn:hover {
+    background-color: #f0f0f0;
+}
+
+/* Remove or comment out this as we're using the image as a background now */
+.left-content img {
+    display: none; /* Hide the original image */
+}
+
+/* Update the right side background */
+.right-side {
+    background-color: #efe3fe; /* Light pink background */
+    color: #333; /* Darker text for contrast */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-content {
+    padding: 40px;
+    text-align: center;
+    width: 80%;
+}
+
+.login-content h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.profile-image {
+    width: 30%;
+    max-width: 120px;
+    aspect-ratio: 1/1; /* Maintains square shape */
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 1.875rem;
+    border: 3px solid #ff66a3; /* Viền hồng */
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+/* Update form elements for better contrast */
+.input-group input {
+    width: 70%;
+    padding: 0.75rem 1.25rem;
+    border-radius: 30px;
+    border: 1px solid #ddd;
+    background-color: #fff; /* White background for inputs */
+    color: #333; /* Darker text for contrast */
+    font-size: 1rem;
+    outline: none;
+}
+
+.input-group input::placeholder {
+    color: #999; /* Darker placeholder text */
+}
+
+.login-btn {
+    background-color: #007bff; /* Màu xanh dương */
+    color: white;
+    border: none;
+    padding: 0.75rem 1.875rem;
+    font-size: 1.1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.login-btn:hover {
+    background-color: #0056b3;
+}
+
+.social-login p {
+    margin-bottom: 15px;
+    color: #ccc;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+}
+
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid white;
+    margin: 0 10px;
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+    transition: border-color 0.3s ease;
+}
+
+.social-icon:hover {
+    border-color: #007bff;
+    color: #007bff;
+}
+
+.back-home {
+    display: block;
+    color: #555;
+    text-decoration: none;
+    font-size: 0.9em;
+    margin-top: 20px;
+    transition: color 0.3s ease;
+}
+
+.back-home:hover {
+    color: #333;
+}
+
+/* Registration link styling */
+.register-option {
+    margin-bottom: 15px;
+}
+
+.register-option p {
+    color: #555;
+    font-size: 0.9rem;
+}
+
+.register-link {
+    color: #ff66a3;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.register-link:hover {
+    color: #ff99c2;
+    text-decoration: underline;
+}
+
+/* Media queries for different screen sizes */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        height: 100vh;
+        overflow-y: auto; /* Allow scrolling if needed */
+    }
+    
+    /* Hide the left side on mobile */
+    .left-side {
+        display: none;
+    }
+    
+    /* Make the right side take up full width and height */
+    .right-side {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .login-content {
+        padding: 2rem 1rem;
+        margin: 0 auto; /* Center the login content */
+        width: 90%; /* Slightly wider on mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    html {
+        font-size: 14px; /* Smaller base font size on mobile */
+    }
+    
+    .profile-image {
+        width: 40%;
+    }
+    
+    .input-group input {
+        width: 80%;
+    }
+}
+
+/* From Uiverse.io by augustin_4687 */ 
+.button {
+    --stone-50: #fafaf9;
+    --stone-800: #292524;
+    --yellow-400: #facc15;
+  
+    font-size: 1rem;
+    cursor: pointer;
+    position: relative;
+    font-family: "Rubik", sans-serif;
+    font-weight: bold;
+    line-height: 1;
+    padding: 1px;
+    transform: translate(-4px, -4px);
+    outline: 2px solid transparent;
+    outline-offset: 5px;
+    border-radius: 9999px;
+    background-color: var(--stone-800);
+    color: var(--stone-800);
+    transition:
+      transform 150ms ease,
+      box-shadow 150ms ease;
+    text-align: center;
+    box-shadow:
+      0.5px 0.5px 0 0 var(--stone-800),
+      1px 1px 0 0 var(--stone-800),
+      1.5px 1.5px 0 0 var(--stone-800),
+      2px 2px 0 0 var(--stone-800),
+      2.5px 2.5px 0 0 var(--stone-800),
+      3px 3px 0 0 var(--stone-800),
+      0 0 0 2px var(--stone-50),
+      0.5px 0.5px 0 2px var(--stone-50),
+      1px 1px 0 2px var(--stone-50),
+      1.5px 1.5px 0 2px var(--stone-50),
+      2px 2px 0 2px var(--stone-50),
+      2.5px 2.5px 0 2px var(--stone-50),
+      3px 3px 0 2px var(--stone-50),
+      3.5px 3.5px 0 2px var(--stone-50),
+      4px 4px 0 2px var(--stone-50);
+  
+    &:hover {
+      transform: translate(0, 0);
+      box-shadow: 0 0 0 2px var(--stone-50);
+    }
+  
+    &:active,
+    &:focus-visible {
+      outline-color: var(--yellow-400);
+    }
+  
+    &:focus-visible {
+      outline-style: dashed;
+    }
+  
+    & > div {
+      position: relative;
+      pointer-events: none;
+      background-color: var(--yellow-400);
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      border-radius: 9999px;
+  
+      &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: 9999px;
+        opacity: 0.5;
+        background-image: radial-gradient(
+            rgb(255 255 255 / 80%) 20%,
+            transparent 20%
+          ),
+          radial-gradient(rgb(255 255 255 / 100%) 20%, transparent 20%);
+        background-position:
+          0 0,
+          4px 4px;
+        background-size: 8px 8px;
+        mix-blend-mode: hard-light;
+        animation: dots 0.5s infinite linear;
+      }
+  
+      & > span {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.75rem 1.25rem;
+        gap: 0.25rem;
+        filter: drop-shadow(0 -1px 0 rgba(255, 255, 255, 0.25));
+  
+        &:active {
+          transform: translateY(2px);
+        }
+      }
+    }
+  }
+  
+  @keyframes dots {
+    0% {
+      background-position:
+        0 0,
+        4px 4px;
+    }
+    100% {
+      background-position:
+        8px 0,
+        12px 4px;
+    }
+  }
+  
+  /* From Uiverse.io by Codecite */ 
+.btn {
+    --fancy-button-gradient-0: #8d49fd;
+    --fancy-button-gradient-50: #7f56f3;
+    --fancy-button-gradient-100: #5691f3;
+    --fancy-button-inner-shadow-top: rgba(233, 209, 255, 0.2);
+    --fancy-button-inner-shadow-top-lg: rgba(9, 12, 60, 0.1);
+    --fancy-button-inner-shadow-bottom: rgba(137, 222, 246, 0.3);
+    --fancy-button-shine-top: #e9d1ff;
+    --fancy-button-shine-bottom: #adfff9;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 21px;
+    text-shadow: 0px 0.5px 0.5px rgba(0, 0, 0, 0.2);
+    padding: 0;
+    margin: 0;
+    appearance: none;
+    border: none;
+    outline: none;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    z-index: 1;
+    border-radius: 25px;
+    color: #fff;
+    background-image: linear-gradient(
+      to bottom,
+      var(--fancy-button-gradient-0) 0%,
+      var(--fancy-button-gradient-50) 50%,
+      var(--fancy-button-gradient-100) 100%
+    );
+    box-shadow:
+      0px 4px 12px rgba(9, 12, 60, 0.15),
+      0px 2px 8px rgba(9, 12, 60, 0.15),
+      0px 1px 3px var(--fancy-button-inner-shadow-top-lg),
+      inset 0px 1px 1px var(--fancy-button-inner-shadow-top),
+      inset 0px -1px 3px var(--fancy-button-inner-shadow-bottom);
+  }
+  
+  .btn:before,
+  .btn:after {
+    content: "";
+    position: absolute;
+    border-radius: inherit;
+    will-change: transform;
+  }
+  
+  .btn:before {
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--fancy-button-shine-top);
+    width: 96px;
+    height: 6px;
+    top: -3px;
+    opacity: 0.6;
+    filter: blur(6px);
+    transition: opacity 0.25s;
+  }
+  
+  .btn:after {
+    inset: 0;
+    background-size: cover;
+    z-index: 2;
+    opacity: 0.3;
+    mix-blend-mode: overlay;
+    pointer-events: none;
+  }
+  
+  .btn span {
+    display: block;
+    padding: 12px 24px;
+    border-radius: inherit;
+    overflow: hidden;
+    position: relative;
+    background-image: linear-gradient(
+      to bottom,
+      var(--fancy-button-shine-top),
+      transparent 8px
+    );
+    background-position: 0 -6px;
+    background-repeat: no-repeat;
+    z-index: 1;
+  }
+  
+  .btn span:before,
+  .btn span:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    background-color: var(--fancy-button-shine-bottom);
+    transition:
+      opacity 0.25s,
+      transform 0.25s;
+    will-change: transform;
+  }
+  
+  .btn span:before {
+    width: 92px;
+    height: 8px;
+    bottom: -4px;
+    opacity: 0.75;
+    filter: blur(6px);
+  }
+  
+  .btn span:after {
+    width: 112px;
+    height: 1px;
+    bottom: 0;
+    opacity: 0.9;
+    filter: blur(1px);
+  }
+  
+  .btn:hover span:before {
+    opacity: 0.8;
+  }
+  
+  .btn:hover span:before {
+    transform: translateX(-50%) scale(1.25);
+  }
+  
+  .btn:hover span:after {
+    opacity: 1;
+  }
+  
+/* Hide the mobile registration link on larger screens */
+.mobile-only {
+    display: none;
+}
+
+/* Show the mobile registration link only on small screens */
+@media (max-width: 768px) {
+    .mobile-only {
+        display: block;
+    }
+}
